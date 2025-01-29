@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static '/login.css' %}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN File</title>
+</head>
+<body> 
+  <h1>Login File</h1>
+  <ol>
+      {% for i in data %}
+      <li>{{i}} <span><a href="delete/{{i}}">Delete</a></span></li>
+      {% endfor %}
+  </ol>
+  
+  <form action="/send" method="POST">
+      {% csrf_token %}
+      <input type="text" name="username" id="username" placeholder="Enter username">
+      <br>
+      <button type="submit">Submit</button>
+  </form>
+
+</body>
+</html>

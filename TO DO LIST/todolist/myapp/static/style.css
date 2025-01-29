@@ -1,0 +1,16 @@
+h1{
+    color: red;
+    text-align: center;
+}
+body{
+    background-color: blueviolet;
+    color: white;
+}
+nav a{
+    color: white;
+    margin-left: 100px;
+    text-decoration: none;
+}
+nav a:hover{
+    color: coral;
+}
